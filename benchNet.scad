@@ -17,12 +17,12 @@ dividing_parts = 29;
 step = width / (dividing_parts + 1) ;
 
 //binding wire
-translate([-perimetr,0,0]){ //centering
+translate([-perimeter,0,0]){ //centering
    for (i=[step:step:width-step]) {
 	   translate([i,0,0]) cube([bw_width * perimeter, height, bw_height * layer]);
    }
 }
 //skewers
-for (i=[0:perimetr * sk_space:height]) {
+for (i=[0:perimeter * sk_space:height]) {
     translate([0,i,0]) cube([width, sk_width * perimeter, sk_height * layer]);
 }
